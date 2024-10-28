@@ -1,6 +1,6 @@
 # LM-DEVELOPMENT - Staff Duty
 
-LM-DEVELOPMENT has released a free resource on GitHub called "Staff Duty" for FiveM servers that utilize TX-Admin. This resource provides an efficient way to manage and check the duty status of staff members.
+[LM-DEVELOPMENT](https://discord.gg/RbSVrGBA9t) has released a free resource on GitHub called "Staff Duty" for FiveM servers that utilize TX-Admin. This resource provides an efficient way to manage and check the duty status of staff members.
 
 ## Key Features
 
