@@ -1,0 +1,6 @@
+{
+    "no_access": "You do not have access to TX-Admin.",
+    "duty_on": "You have gone on duty as staff!",
+    "duty_off": "You have gone off duty as staff!",
+    "command_help": "Toggle Duty"
+}
