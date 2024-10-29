@@ -37,3 +37,13 @@ lib.addCommand(Config.Command, {
         TriggerClientEvent('illenium-appearance:client:loadJobOutfit', source, { outfitData = Config.Outfits[GetEntityModel(GetPlayerPed(source))] })
     end
 end)
+
+-- // [EVENTS] \\ --
+
+RegisterNetEvent('txsv:checkIfAdmin', function()
+    local src = source
+
+    if not Player(src).state.isOnDuty then
+        TriggerClientEvent("txcl:setAdmin", src, false, false, locale("no_access"))
+    end
+end
