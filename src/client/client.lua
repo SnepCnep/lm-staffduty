@@ -1,30 +1,20 @@
 -- // [STARTUP] \\ --
-lib.locale()
+lib.locale() -- Register ox locales
+LM = { ["Functions"] = {} } -- Vairable handler.
 
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(PlayerData)
-    ESX.PlayerData = PlayerData
-    ESX.PlayerLoaded = true
-end)
 
-RegisterNetEvent('esx:onPlayerLogout')
-AddEventHandler('esx:onPlayerLogout', function()
-    ESX.PlayerLoaded = false
-end)
+-- // [Functions] \\ --
+LM.Functions:CreateExpport = functioon(exportName, exportFunc)
+    AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
+        setCB(exportName)
+    end)
+end
 
-RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function(Job)
-    ESX.PlayerData.job = Job
-end)
-
--- // [THREADS] \\ --
-
-CreateThread(function()
-    while not ESX.PlayerLoaded do Wait(0) end
-
-    TriggerEvent("txcl:setAdmin", false, false, locale("no_access"))
-end)
-
+-- // [Exports] \\ --
+LM.Functions:CreateExpport("isOnDuty", function()
+    local status = LocalPlayer.state?.isOnDuty
+    return (status or false)
+end
 -- // [STATEBAG] \\ --
 
 AddStateBagChangeHandler('isOnDuty', nil, function(bagName, key, value, _reserved, replicated)
