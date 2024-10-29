@@ -10,6 +10,8 @@
 
 - **Statebag-Based System**: Utilizes FiveM's statebag system for efficient status updates.
 
+- **Export Supported**: We also add a exports for the people who want is use that.
+
 ## Requirements
 
 For the best experience, we recommend using the following versions or newer:
