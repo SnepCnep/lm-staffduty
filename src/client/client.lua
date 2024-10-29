@@ -2,15 +2,16 @@
 lib.locale() -- Register ox locales
 LM = { ["Functions"] = {} } -- Vairable handler.
 
+-- // [FUNCTIONS] \\ --
 
--- // [Functions] \\ --
 LM.Functions:createExport = functioon(exportName, exportFunc)
     AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
         setCB(exportName)
     end)
 end
 
--- // [Exports] \\ --
+-- // [EXPORTS] \\ --
+
 LM.Functions:createExport("isOnDuty", function()
     local status = LocalPlayer.state?.isOnDuty
     return (status or false)
