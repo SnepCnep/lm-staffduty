@@ -29,15 +29,32 @@ With this resource, server administrators can:
 
 **Client-side Check:**
 
+- StateBag
 ```lua
 if LocalPlayer.state.isOnDuty then
     print("Hello World, I am on staff duty")
 end
 ```
 
+- Exports
+```lua
+if Exports["lm-staffduty]:isOnDuty() then
+    print("Hello World, I am on staff duty")
+end
+```
+
 **Server-side Check:**
+
+- StateBag
 ```lua
 if Player(source).state.isOnDutythen
+    print("Hello World, I am on staff duty")
+end
+```
+
+- Exports
+```lua
+if Exports["lm-staffduty]:isOnDuty(source) then
     print("Hello World, I am on staff duty")
 end
 ```
