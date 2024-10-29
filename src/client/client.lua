@@ -4,7 +4,7 @@ LM = { ["Functions"] = {} } -- Vairable handler.
 
 -- // [FUNCTIONS] \\ --
 
-LM.Functions:createExport = functioon(exportName, exportFunc)
+LM.Functions:createExport = function(exportName, exportFunc)
     AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
         setCB(exportName)
     end)
