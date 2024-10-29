@@ -5,6 +5,7 @@ LM = { ["Functions"] = {} }
 
 
 -- // [FUNCTIONS] \\ --
+
 LM.Functions:createExport = functioon(exportName, exportFunc)
     AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
         setCB(exportName)
@@ -12,6 +13,7 @@ LM.Functions:createExport = functioon(exportName, exportFunc)
 end
 
 -- // [EXPORT] \\ --
+
 LM.Functions:createExport("isOnDuty", function(source)
     local status = Player(source).state?.isOnDuty
     return (status or false)
@@ -57,7 +59,7 @@ end)
 RegisterNetEvent('txsv:checkIfAdmin', function()
     local src = source
 
-    if not Player(src).state.isOnDuty then
+    if not (Player(src).statez?.isOnDuty or false) then
         TriggerClientEvent("txcl:setAdmin", src, false, false, locale("no_access"))
     end
 end
