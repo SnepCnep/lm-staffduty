@@ -1,7 +1,21 @@
 -- // [STARTUP] \\ --
-
 lib.locale()
 local Config = require('shared.config')
+LM = { ["Functions"] = {} }
+
+
+-- // [FUNCTIONS] \\ --
+LM.Functions:createExport = functioon(exportName, exportFunc)
+    AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
+        setCB(exportName)
+    end)
+end
+
+-- // [EXPORT] \\ --
+LM.Functions:createExport("isOnDuty", function(source)
+    local status = Player(source).state?.isOnDuty
+    return (status or false)
+end
 
 -- // [CALLBACKS] \\ --
 
