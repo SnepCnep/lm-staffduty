@@ -36,7 +36,7 @@ if LocalPlayer.state.isOnDuty then
 end
 ```
 
-- Exports
+- Exports __(The export is always the same!)__
 ```lua
 if Exports["lm-staffduty]:isOnDuty() then
     print("Hello World, I am on staff duty")
@@ -52,7 +52,7 @@ if Player(source).state.isOnDutythen
 end
 ```
 
-- Exports
+- Exports __(The export is always the same!)__
 ```lua
 if Exports["lm-staffduty]:isOnDuty(source) then
     print("Hello World, I am on staff duty")
