@@ -49,7 +49,7 @@ end
 
 - StateBag
 ```lua
-if Player(source).state.isOnDutythen
+if Player(source).state.isOnDuty then
     print("Hello World, I am on staff duty")
 end
 ```
