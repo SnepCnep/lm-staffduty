@@ -4,17 +4,18 @@ LM = { ["Functions"] = {} } -- Vairable handler.
 
 
 -- // [Functions] \\ --
-LM.Functions:CreateExpport = functioon(exportName, exportFunc)
+LM.Functions:createExport = functioon(exportName, exportFunc)
     AddEventHandler(('__cfx_export_lm-staffduty_%s'):format(exportName), function(setCB)
         setCB(exportName)
     end)
 end
 
 -- // [Exports] \\ --
-LM.Functions:CreateExpport("isOnDuty", function()
+LM.Functions:createExport("isOnDuty", function()
     local status = LocalPlayer.state?.isOnDuty
     return (status or false)
 end
+
 -- // [STATEBAG] \\ --
 
 AddStateBagChangeHandler('isOnDuty', nil, function(bagName, key, value, _reserved, replicated)
