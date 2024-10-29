@@ -39,6 +39,7 @@ lib.addCommand(Config.Command, {
 end)
 
 -- // [Events] \\ --
+
 RegisterNetEvent('txsv:checkIfAdmin', function()
     local src = source
 
